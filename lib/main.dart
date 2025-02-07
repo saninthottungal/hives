@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final dir = await getApplicationCacheDirectory();
+
   runApp(const MyApp());
 }
 
